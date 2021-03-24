@@ -32,13 +32,13 @@ class Cadastro extends StatefulWidget {
             children: <Widget>[
               TextField(
                 controller: _controladorNome,
-                decoration: InputDecoration(labelText: 'Nome'),
+                decoration: InputDecoration(icon:Icon(Icons.live_tv_rounded), labelText: 'Nome'),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorGenero,
-                  decoration: InputDecoration(labelText: 'Gênero'),
+                  decoration: InputDecoration(icon:Icon(Icons.folder),labelText: 'Gênero'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -46,7 +46,7 @@ class Cadastro extends StatefulWidget {
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorDuracao,
-                  decoration: InputDecoration(labelText: 'Duração'),
+                  decoration: InputDecoration( icon: Icon(Icons.schedule),labelText: 'Duração'),
                   keyboardType: TextInputType.number,
                   
                 ),
@@ -55,7 +55,7 @@ class Cadastro extends StatefulWidget {
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorSinopse,
-                  decoration: InputDecoration(labelText: 'Sinopse'),
+                  decoration: InputDecoration(icon:Icon(Icons.comment),labelText: 'Sinopse'),
                   maxLines: null,
                   keyboardType: TextInputType.multiline
                 ),
