@@ -24,6 +24,7 @@ class Filme{
         duracao = json['duracao'],
         sinopse = json['sinopse'],
         diretor = json['diretor'];
+        
     Map<String, dynamic> toJson() =>
       {
          'nome' : nome,
