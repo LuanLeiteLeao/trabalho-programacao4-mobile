@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mercado/model.dart';
+import 'package:mercado/API.dart';
+import 'package:mercado/main.dart';
 
 //void main() => runApp(MyApp());
 
@@ -75,7 +77,10 @@ class Cadastro extends StatefulWidget {
                   child: Text('Cadastrar'),
                   onPressed: () {
                     salvar();
-                    Navigator.pop(context);             
+                   Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MyApp()),
+        );         
                   },
                 ),
               ),
@@ -94,8 +99,9 @@ class Cadastro extends StatefulWidget {
     final String diretor =  _controladorDiretor.text; 
     
     final Filme produtoNovo =  Filme(nome, genero, duracao,sinopse,diretor);
-    print(produtoNovo);  
-      
+    
+    print("--------------------------->");  
+    API.postFilmes(produtoNovo);  
     
   }
 
